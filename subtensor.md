@@ -46,7 +46,7 @@ vim docker-compose.yml
 4. hit `esc` to end editing
 5. enter `:wq` and hit `return` to save and exit
 
-Next step, you can run subtensor using [docker](https://github.com/nihicak/documentation/subtensor-setup.md#using-docker) or by [building the binary](https://github.com/nihicak/documentation/subtensor-setup.md#using-build-binary)
+Next step, you can run subtensor using [docker](https://github.com/nihicak/documentation/blob/main/subtensor.md#using-docker) or by [building the binary](https://github.com/nihicak/documentation/blob/main/subtensor.md#using-build-binary)
 
 ## Using Docker
 Pull subtensor image and run
