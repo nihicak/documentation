@@ -16,11 +16,13 @@ References:
 ## Setup
 ### Install essential
 The following command installs the essentials for most mining operation. Simply run and go through the steps.
+
+Bittensor installation may take awhile with slow download speed, you can skip it if you are not running a miner or plan to use it.
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nihicak/bittensor/master/scripts/install.sh)"
 ```
 
-### Run Subtensor (mainnet lite node)
+### Run subtensor (mainnet lite node)
 Pull from subtensor github
 ```bash
 git clone https://github.com/opentensor/subtensor.git
@@ -48,7 +50,7 @@ vim docker-compose.yml
 
 Next step, you can run subtensor using [docker](https://github.com/nihicak/documentation/blob/main/subtensor.md#using-docker) or by [building the binary](https://github.com/nihicak/documentation/blob/main/subtensor.md#using-build-binary)
 
-## Using Docker
+## Using docker
 Pull subtensor image and run
 ```bash
 sudo ./scripts/run/subtensor.sh -e docker --network mainnet --node-type lite
@@ -82,7 +84,7 @@ docker system prune -a -f && \
 docker volume prune -a -f
 ```
 
-## Using Build Binary
+## Using build binary
 **Building the binary**
 Install essentials
 ```bash
@@ -167,8 +169,8 @@ pm2 del subtensor
   3) 30333 - p2p socket. This port accepts connections from other subtensor nodes. Make sure your firewall(s) allow incoming traffic to this port.
 * It is assumed your default outgoing traffic policy is ACCEPT. If not, make sure outbound traffic to port 30333 is allowed.
 
-## Test Subtensor
-Wait for Subtensor to finish downloading and **starts syncing** (when the log runs like crazy), usually within few minutes with a decent download speed
+## Test subtensor
+Wait for subtensor to connect with peers, finish downloading and **starts syncing** (when the log runs like crazy)
 
 Use `btcli` to retrieve data (assuming you have installed Bittensor via the essential setup)
 
