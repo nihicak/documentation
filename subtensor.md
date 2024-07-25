@@ -14,7 +14,7 @@ References:
 * Python 3.10.X
 
 ## Setup
-### Install essential
+### Install essentials
 The following command installs the essentials for most mining operation. Simply run and go through the steps.
 
 Bittensor installation may take awhile with slow download speed, you can skip it if you are not running a miner or plan to use it.
@@ -86,6 +86,7 @@ docker volume prune -a -f
 
 ## Using build binary
 **Building the binary**
+
 Install essentials
 ```bash
 sudo apt-get update && \
@@ -164,7 +165,7 @@ pm2 del subtensor
 * Subtensor needs access to the public internet
 * Subtensor runs on ipv4
 * Subtensor listens on the following ports:
-  1) 9944 - Websocket. This port is used by bittensor. It only accepts connections from localhost. Make sure this port is firewalled off from the public domain.
+  1) 9944 - Websocket. Use for retrieving chain data. This port can be made private by removing `--rpc-external --rpc-cors all`.
   2) 9933 - RPC. This port is opened, but not used.
   3) 30333 - p2p socket. This port accepts connections from other subtensor nodes. Make sure your firewall(s) allow incoming traffic to this port.
 * It is assumed your default outgoing traffic policy is ACCEPT. If not, make sure outbound traffic to port 30333 is allowed.
